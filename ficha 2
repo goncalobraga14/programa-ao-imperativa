@@ -24,3 +24,40 @@ float multInt2 (int n, float m) {
     }
     return r;
 }
+
+int mdc1 (int a, int b){
+int temp;
+int ans;
+
+   if(a < b) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    for(int i = 1; i <= b; i++) {
+        if(a % i == 0 && b % i == 0) 
+        ans = i;
+    }
+  printf("%i",ans);
+}
+int mdc2 (int a, int b){
+  
+  int r=0;
+  
+   while(a!=0 && b!=0){
+        if(a < b) {
+        b-=a;
+        }
+        else a-=b;
+   
+    }
+    if (a>0) return a;
+    else return b;
+    
+}
+
+int fib (int n) {
+    
+    if(n == 1 || n == 2) return 1;
+    else return fib(n - 1) + fib(n - 2);
+}
