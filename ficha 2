@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+float multInt1 (int n, float m){
+    
+    float r=0;
+    int i;
+    
+    for(i=0;i<=n;i++){
+        r=i*m;
+        printf("%f\n",r);
+    }
+   
+}
+
+float multInt2 (int n, float m) {
+    float r = 0;
+    while(n > 0) {
+        if(n % 2) r += m;
+        n /= 2;
+        m *= 2; 
+    }
+    return r;
+}
