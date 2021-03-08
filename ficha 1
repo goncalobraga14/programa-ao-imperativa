@@ -80,7 +80,7 @@ void triangle_v()
 }
 
 
-int triangle_h()
+void triangle_h()
 {
     int x;
     int i;
