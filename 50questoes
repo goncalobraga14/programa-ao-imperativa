@@ -1,0 +1,17 @@
+void big()
+{
+   int big= 0;
+
+   printf("introduza uma sequencia de numeros( 1 por linha maluco :-)  ):");
+   
+   
+   while(1){
+       int n;
+       assert(scanf("%d",&n)==1);
+       
+       if(n==0) break;
+       if(n>big) big=n;
+   }
+   
+  printf("%d é o maior\n",big);
+}
