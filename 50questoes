@@ -1,4 +1,4 @@
-void big()
+int ex1()
 {
    int big= 0;
 
@@ -15,3 +15,5 @@ void big()
    
   printf("%d é o maior\n",big);
 }
+
+
