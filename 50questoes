@@ -170,3 +170,47 @@ void ex12(char t[]){
     }
     t[pos] = '\0';
 }
+
+
+void ex13(char t[], int n) {
+    int i, adi, pos;
+    for (i = 0, pos = 0, adi = 0; t[i] != '\0'; i++) {
+        if (t[i] == ' ') {
+            adi = 0;
+            t[pos++] = ' ';
+        } else if (adi < n) {
+            t[pos++] = t[i];
+            adi++;
+        }
+    }
+    t[pos] = '\0';
+}
+
+char ex14(char s[]){
+    int i,j;
+    int count=0;
+    char letra;
+    int freq=0;
+    for(i=0;s[i]!='\0';i++){
+        count=0;
+        for(j=0;s[j]!='\0';j++){
+            if(s[i]==s[j])count++;
+            
+        }
+        if(freq<count){
+            freq=count;
+            letra=s[i];
+        }
+    }
+    return letra;
+}
+
+int ex15(char s[]) {
+    int i, k;
+    int seq = 0, n;
+    for (i = 0, n = 0; s[i] != '\0'; i++, n = 0) {
+        for (k = i; s[k] == s[i] && s[k] != '\0'; k++) n++;
+        if (n > seq) seq = n;
+    }
+    return seq;
+}
