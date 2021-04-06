@@ -61,6 +61,27 @@ int duplicaVogais (char *s){
     return duplicados;
 }
 
+int ordenado (int v[], int N){
+    int i,res=1;
+    for(i=0;v[i]<N;i++){
+        res= v[i]<=v[i+1];
+    }
+    return res;
+}
 
+void merge (int a[], int na, int b[], int nb, int r[]){
+    int nr=na+nb;
+    for(int i=0;a[i]<na;i++){
+        for(int j=0;r[j]<nr;j++){
+            if(a[i]>=b[i]){
+                r[j]=b[i];
+                r[j+1]=a[i];
+            }else{
+                r[j]=a[i];
+                r[j+1]=b[i];
+            }
+        }
+    }
+}
 
 
