@@ -139,3 +139,14 @@ char *ex10(char s1[], char s2[]) {
     }
     return res;
 }
+
+void ex11(char s[]){
+    char temp;
+    int i;
+    for( i=0; s[i]!='\0';i++);
+        for(int j=0; j < i/2;j++){
+            temp=s[j];
+            s[j]=s[i-j-1];
+            s[i-j-1]=temp;
+        }
+}
